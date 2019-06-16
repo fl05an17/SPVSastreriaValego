@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace SPVSastreriaValego
 {
-    public partial class Form1 : Form
+    public partial class frmPanelAdmin : Form
     {
-        public Form1()
+        public frmPanelAdmin()
         {
             InitializeComponent();
         }
