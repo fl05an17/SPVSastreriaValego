@@ -16,7 +16,7 @@ namespace SPVSastreriaValego
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmPanelAdmin());
+            Application.Run(new frmPanelUser());
         }
     }
 }
