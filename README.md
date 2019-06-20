@@ -4,6 +4,7 @@ Sistema de inventario y ventas desarrollado a la medida para empresa Sastreria V
 Comentarios archivo App.config
 Aqui agregamos la cadena String para realizar la conexion con la base de datos que corresponda a nuestro proyecto
 Codigo EJEMPLO dentro del archivo
+```
 <?xml version="1.0" encoding="utf-8" ?>
 <configuration>
     <startup> 
@@ -17,3 +18,4 @@ Codigo EJEMPLO dentro del archivo
   </connectionStrings>
   //Hata aqui
 </configuration>
+```
