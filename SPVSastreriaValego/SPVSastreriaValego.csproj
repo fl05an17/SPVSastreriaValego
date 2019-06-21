@@ -46,24 +46,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="frmPanelAdmin.cs">
+    <Compile Include="UI\frmPanelAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmPanelAdmin.Designer.cs">
+    <Compile Include="UI\frmPanelAdmin.Designer.cs">
       <DependentUpon>frmPanelAdmin.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmPanelUser.cs">
+    <Compile Include="UI\frmPanelUser.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmPanelUser.Designer.cs">
+    <Compile Include="UI\frmPanelUser.Designer.cs">
       <DependentUpon>frmPanelUser.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="frmPanelAdmin.resx">
+    <Compile Include="UI\frmUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\frmUsuarios.Designer.cs">
+      <DependentUpon>frmUsuarios.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="UI\frmPanelAdmin.resx">
       <DependentUpon>frmPanelAdmin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmPanelUser.resx">
+    <EmbeddedResource Include="UI\frmPanelUser.resx">
       <DependentUpon>frmPanelUser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -76,6 +82,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UI\frmUsuarios.resx">
+      <DependentUpon>frmUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -91,6 +100,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\logoSastreria.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\icon_close.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

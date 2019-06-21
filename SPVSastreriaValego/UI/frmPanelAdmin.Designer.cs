@@ -38,8 +38,8 @@
             this.transaccionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lblUser = new System.Windows.Forms.Label();
             this.lblLoggedInUser = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnlFooter.SuspendLayout();
             this.menuStripTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -84,6 +84,7 @@
             this.usuariosToolStripMenuItem.Name = "usuariosToolStripMenuItem";
             this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(64, 20);
             this.usuariosToolStripMenuItem.Text = "Usuarios";
+            this.usuariosToolStripMenuItem.Click += new System.EventHandler(this.usuariosToolStripMenuItem_Click);
             // 
             // categoriaToolStripMenuItem
             // 
@@ -130,16 +131,6 @@
             this.lblLoggedInUser.TabIndex = 3;
             this.lblLoggedInUser.Text = "Santiago Florez L";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::SPVSastreriaValego.Properties.Resources.logoSastreria;
-            this.pictureBox1.Location = new System.Drawing.Point(545, 238);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(317, 176);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -149,6 +140,16 @@
             this.label1.Size = new System.Drawing.Size(329, 30);
             this.label1.TabIndex = 5;
             this.label1.Text = "Gestion de Ventas e Inventario";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::SPVSastreriaValego.Properties.Resources.logoSastreria;
+            this.pictureBox1.Location = new System.Drawing.Point(545, 238);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(317, 176);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
             // 
             // frmPanelAdmin
             // 

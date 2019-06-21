@@ -8,13 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace SPVSastreriaValego
+namespace SPVSastreriaValego.UI
 {
-    public partial class frmPanelAdmin : Form
+    public partial class frmUsuarios : Form
     {
-        public frmPanelAdmin()
+        public frmUsuarios()
         {
             InitializeComponent();
-        }        
+        }
+
+        private void pictureBoxClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
