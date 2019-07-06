@@ -49,6 +49,12 @@
   <ItemGroup>
     <Compile Include="BLL\usuariosBLL.cs" />
     <Compile Include="DAL\usuariosDAL.cs" />
+    <Compile Include="UI\frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\frmPanelAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -69,6 +75,9 @@
     <Compile Include="UI\frmUsuarios.Designer.cs">
       <DependentUpon>frmUsuarios.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UI\frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\frmPanelAdmin.resx">
       <DependentUpon>frmPanelAdmin.cs</DependentUpon>
     </EmbeddedResource>

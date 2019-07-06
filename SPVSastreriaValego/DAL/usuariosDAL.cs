@@ -198,5 +198,43 @@ namespace SPVSastreriaValego.DAL
             return isSuccess;
         }
         #endregion
+
+        #region Serch user on Database usingKeywords
+        public DataTable Search(string keywords)
+        {
+            //nuevo objeto de tipo conexionSql
+            SqlConnection conn = new SqlConnection(myconnstrng);
+            //Objeto tipo Tabla de datos que almacenara los datos de la base de datos temporalmente
+            //Mantiene o almacena los datos de la DataBase(DB)
+            DataTable dt = new DataTable();
+
+            try
+            {
+                //cadena para seleccionar todos los datos de la tabla Usuarios
+                //Consulta(Query) para obtner datos de la DB
+                String sql = "SELECT * FROM tbl_Usuarios WHERE id LIKE '%"+keywords+"%' OR Nombre LIKE '%"+keywords+"%' OR Apellido LIKE '%"+keywords+"%' OR NombreUsuario LIKE '%"+keywords+"%' ";
+                //objeto de tipo comandoSql que recibe cadena de consulta y la conexion de donde se va consultar(comando que ejecuta)
+                SqlCommand cmd = new SqlCommand(sql, conn);
+                //objeto de tipo Adaptador de datos sql obtiene los datos del objeto cmd (para adaptar a la DataTable)
+                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                //abre la conexion a la base de datos
+                conn.Open();
+                //Llena los datos en la DataTable
+                adapter.Fill(dt);
+            }
+            catch (Exception ex)
+            {
+                //muestra algun mensaje si hay algun error en nuestro codigo
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                //cierra la conexion
+                conn.Close();
+            }
+            //Returna el valor en la DataTable
+            return dt;
+        }
+        #endregion
     }
 }

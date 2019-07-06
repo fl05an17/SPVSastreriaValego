@@ -162,5 +162,29 @@ namespace SPVSastreriaValego.UI
             DataTable dt = dal.Select();
             dgvUsuarios.DataSource = dt;
         }
+
+        private void txtBuscar_TextChanged(object sender, EventArgs e)
+        {
+            //Get Keybord from textbox
+            string keywords = txtBuscar.Text;
+
+            //chec if the keywords has value or not
+            if (keywords != null)
+            {
+                //Show user based on keywords
+                DataTable dt = dal.Search(keywords);
+                dgvUsuarios.DataSource = dt;
+            }
+            else
+            {
+                //show all users from the database 
+                DataTable dt = dal.Select();
+                dgvUsuarios.DataSource = dt;
+            }
+
+
+             
+        }
+        
     }
 }

@@ -309,9 +309,9 @@
             this.txtBuscar.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBuscar.Location = new System.Drawing.Point(376, 45);
             this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.ReadOnly = true;
             this.txtBuscar.Size = new System.Drawing.Size(557, 25);
             this.txtBuscar.TabIndex = 23;
+            this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
             // 
             // lblBuscar
             // 

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SPVSastreriaValego.UI;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,7 +17,7 @@ namespace SPVSastreriaValego
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmPanelAdmin());
+            Application.Run(new frmLogin());
         }
     }
 }
