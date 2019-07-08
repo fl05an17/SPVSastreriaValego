@@ -199,7 +199,7 @@ namespace SPVSastreriaValego.DAL
         }
         #endregion
 
-        #region Serch user on Database usingKeywords
+        #region Search user on Database usingKeywords
         public DataTable Search(string keywords)
         {
             //nuevo objeto de tipo conexionSql

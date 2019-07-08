@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SPVSastreriaValego.UI;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,13 @@ namespace SPVSastreriaValego
         public frmPanelUser()
         {
             InitializeComponent();
+        }
+
+        private void frmPanelUser_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            frmLogin login = new frmLogin();
+            login.Show();
+            this.Hide();
         }
     }
 }

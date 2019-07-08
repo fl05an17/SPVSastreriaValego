@@ -25,5 +25,12 @@ namespace SPVSastreriaValego
             frmUsuarios usuario = new frmUsuarios();//Nuevo objeto usuario
             usuario.Show();//Mostrar el formulario de usuario
         }
+
+        private void frmPanelAdmin_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            frmLogin login = new frmLogin();
+            login.Show();
+            this.Hide();
+        }
     }
 }
