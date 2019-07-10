@@ -24,5 +24,10 @@ namespace SPVSastreriaValego
             login.Show();
             this.Hide();
         }
+
+        private void frmPanelUser_Load(object sender, EventArgs e)
+        {
+            lblLoggedInUser.Text = frmLogin.uConect;
+        }
     }
 }

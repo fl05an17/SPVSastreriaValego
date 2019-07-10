@@ -100,9 +100,8 @@
             this.lblLoggedInUser.ForeColor = System.Drawing.Color.ForestGreen;
             this.lblLoggedInUser.Location = new System.Drawing.Point(66, 42);
             this.lblLoggedInUser.Name = "lblLoggedInUser";
-            this.lblLoggedInUser.Size = new System.Drawing.Size(116, 17);
+            this.lblLoggedInUser.Size = new System.Drawing.Size(0, 17);
             this.lblLoggedInUser.TabIndex = 7;
-            this.lblLoggedInUser.Text = "Santiago Florez L";
             // 
             // lblUser
             // 
@@ -151,6 +150,7 @@
             this.Text = "Panel Usuario";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmPanelUser_FormClosed);
+            this.Load += new System.EventHandler(this.frmPanelUser_Load);
             this.menuStripTop.ResumeLayout(false);
             this.menuStripTop.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

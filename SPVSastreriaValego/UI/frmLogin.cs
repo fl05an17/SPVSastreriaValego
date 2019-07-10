@@ -21,6 +21,7 @@ namespace SPVSastreriaValego.UI
 
         loginBLL l = new loginBLL();
         loginDAL dal = new loginDAL();
+        public static string uConect;
 
         private void pBoxClose_Click(object sender, EventArgs e)
         {
@@ -39,6 +40,8 @@ namespace SPVSastreriaValego.UI
             {
                 //Login Successfull
                 MessageBox.Show("Inicio de Sesión EXITOSO");
+                //almacena el nombre del usuario
+                uConect = l.NombreUsuario;
 
                 //Abre el formulario respectivo segun el tipo de usuario
                 switch (l.TipodeUsuario)

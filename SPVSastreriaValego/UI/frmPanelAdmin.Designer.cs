@@ -127,9 +127,8 @@
             this.lblLoggedInUser.ForeColor = System.Drawing.Color.ForestGreen;
             this.lblLoggedInUser.Location = new System.Drawing.Point(66, 42);
             this.lblLoggedInUser.Name = "lblLoggedInUser";
-            this.lblLoggedInUser.Size = new System.Drawing.Size(116, 17);
+            this.lblLoggedInUser.Size = new System.Drawing.Size(0, 17);
             this.lblLoggedInUser.TabIndex = 3;
-            this.lblLoggedInUser.Text = "Santiago Florez L";
             // 
             // label1
             // 
@@ -168,6 +167,7 @@
             this.Text = "Panel Administrador";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmPanelAdmin_FormClosed);
+            this.Load += new System.EventHandler(this.frmPanelAdmin_Load);
             this.pnlFooter.ResumeLayout(false);
             this.pnlFooter.PerformLayout();
             this.menuStripTop.ResumeLayout(false);

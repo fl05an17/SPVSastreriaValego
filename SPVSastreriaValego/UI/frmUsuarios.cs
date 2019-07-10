@@ -35,6 +35,7 @@ namespace SPVSastreriaValego.UI
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
+            
             //Getting Data From UI
             u.Nombre = txtNombre.Text;
             u.Apellido = txtApellido.Text;
@@ -46,7 +47,10 @@ namespace SPVSastreriaValego.UI
             u.Genero = cmbGenero.Text;
             u.TipodeUsuario = cmbTusuario.Text;
             u.added_date = DateTime.Now;
-            u.added_by = 1;
+            //Getting Username of the logged in user
+            string loggedUser = frmLogin.uConect;
+            usuariosBLL usr = dal.GetIDFromUsername(loggedUser);
+            u.added_by = usr.id;
 
             //Iserting Data into DataBase
             bool success = dal.Insert(u);
@@ -119,7 +123,10 @@ namespace SPVSastreriaValego.UI
             u.Genero = cmbGenero.Text;
             u.TipodeUsuario = cmbTusuario.Text;
             u.added_date = DateTime.Now;
-            u.added_by = 1;
+            //Getting Username of the logged in user
+            string loggedUser = frmLogin.uConect;
+            usuariosBLL usr = dal.GetIDFromUsername(loggedUser);
+            u.added_by = usr.id;
 
             //Updating into DataBase
             bool success = dal.Update(u);
