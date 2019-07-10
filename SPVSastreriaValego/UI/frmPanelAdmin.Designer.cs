@@ -89,8 +89,9 @@
             // categoriaToolStripMenuItem
             // 
             this.categoriaToolStripMenuItem.Name = "categoriaToolStripMenuItem";
-            this.categoriaToolStripMenuItem.Size = new System.Drawing.Size(70, 20);
-            this.categoriaToolStripMenuItem.Text = "Categoría";
+            this.categoriaToolStripMenuItem.Size = new System.Drawing.Size(75, 20);
+            this.categoriaToolStripMenuItem.Text = "Categorías";
+            this.categoriaToolStripMenuItem.Click += new System.EventHandler(this.categoriaToolStripMenuItem_Click);
             // 
             // productosToolStripMenuItem
             // 

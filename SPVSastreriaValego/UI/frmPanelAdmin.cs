@@ -37,5 +37,11 @@ namespace SPVSastreriaValego
         {
             lblLoggedInUser.Text = frmLogin.uConect;
         }
+
+        private void categoriaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmCategorias cate = new frmCategorias();
+            cate.Show();
+        }
     }
 }
