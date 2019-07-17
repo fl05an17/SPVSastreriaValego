@@ -43,5 +43,11 @@ namespace SPVSastreriaValego
             frmCategorias cate = new frmCategorias();
             cate.Show();
         }
+
+        private void productosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmProductos product = new frmProductos();
+            product.Show();
+        }
     }
 }

@@ -19,7 +19,7 @@ namespace SPVSastreriaValego.DAL
         public DataTable Select()
         {
             //Creating DataBase Connection
-            SqlConnection conn = new SqlConnection();
+            SqlConnection conn = new SqlConnection(myconnstrng);
 
             DataTable dt = new DataTable();
 
@@ -28,9 +28,9 @@ namespace SPVSastreriaValego.DAL
                 //Writing SQL Query to get all Data from Database 
                 string sql = "SELECT * FROM tbl_Categorias";
 
-                SqlCommand cmd = new SqlCommand();
+                SqlCommand cmd = new SqlCommand(sql, conn);
 
-                SqlDataAdapter adapter = new SqlDataAdapter();
+                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
                 //Open DataBase Connection
                 conn.Open();
 
@@ -178,6 +178,44 @@ namespace SPVSastreriaValego.DAL
             }
 
             return isSuccess;
+        }
+        #endregion
+        #region Method for Search Funtionality
+        public DataTable Search(string keywords)
+        {
+            //SQL Connection for database connection
+            SqlConnection conn = new SqlConnection(myconnstrng);
+
+            //Creating Data Table to hold th data from database temporarily
+            DataTable dt = new DataTable();
+
+            try
+            {
+                //Sql Query ToolBar search categories form database
+                String sql = "SELECT * FROM tbl_Categorias WHERE id LIKE '%" + keywords + "%' OR Titulo LIKE '%" + keywords + "%' OR Descripcion LIKE '%" + keywords + "%' ";
+                //Creating Sql command to execute the query 
+                SqlCommand cmd = new SqlCommand(sql, conn);
+
+                //Getting data form database
+                SqlDataAdapter adpater = new SqlDataAdapter(cmd);
+
+                //Open databaseConnection
+                conn.Open();
+
+                //Passgin values from adpater to data table dt
+                adpater.Fill(dt);
+
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+            return dt;
         }
         #endregion
     }
