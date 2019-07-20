@@ -49,5 +49,11 @@ namespace SPVSastreriaValego
             frmProductos product = new frmProductos();
             product.Show();
         }
+
+        private void proveedoresYClientesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmProvClie ProvCli = new frmProvClie();
+            ProvCli.Show();
+        }
     }
 }

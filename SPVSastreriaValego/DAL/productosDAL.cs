@@ -102,7 +102,7 @@ namespace SPVSastreriaValego.DAL
 
             try
             {
-                string sql = "UPDATE tbl_Productos SET Nombre=@Nombre, Categoria=@Categoria, Descripcion=@Descripcion, Precio=@Precio, Cantidad=@Cantidad, added_date=@added_date, added_by=@added_by WHERE id=@id";
+                string sql = "UPDATE tbl_Productos SET Nombre=@Nombre, Categoria=@Categoria, Descripcion=@Descripcion, Precio=@Precio, added_date=@added_date, added_by=@added_by WHERE id=@id";
 
                 SqlCommand cmd = new SqlCommand(sql, conn);
 
@@ -180,6 +180,30 @@ namespace SPVSastreriaValego.DAL
             return isSuccess;
         }
         #endregion
+        #region Method for search funtionality
+        public DataTable Search(string keywords)
+        {
+            SqlConnection conn = new SqlConnection(myconnstrng);
+            DataTable dt = new DataTable();
 
+            try
+            {
+                string sql = "SELECT * FROM tbl_Productos WHERE id LIKE '%" + keywords + "%' OR Nombre LIKE '%" + keywords + "%' OR Categoria LIKE '%" + keywords + "%' OR Descripcion LIKE '%" + keywords + "%' OR Precio LIKE '%" + keywords + "%' OR Cantidad LIKE '%" + keywords + "%'";
+                SqlCommand cmd = new SqlCommand(sql, conn);
+                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                conn.Open();
+                adapter.Fill(dt);
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return dt;
+        }
+        #endregion
     }
 }
