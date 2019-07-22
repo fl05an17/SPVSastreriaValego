@@ -192,6 +192,9 @@
             // 
             this.cmbTipo.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbTipo.FormattingEnabled = true;
+            this.cmbTipo.Items.AddRange(new object[] {
+            "Proveedor",
+            "Cliente"});
             this.cmbTipo.Location = new System.Drawing.Point(134, 110);
             this.cmbTipo.Name = "cmbTipo";
             this.cmbTipo.Size = new System.Drawing.Size(234, 25);
@@ -208,6 +211,7 @@
             this.btnAgregar.TabIndex = 16;
             this.btnAgregar.Text = "AGREGAR";
             this.btnAgregar.UseVisualStyleBackColor = false;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // btnActualizar
             // 
@@ -220,6 +224,7 @@
             this.btnActualizar.TabIndex = 17;
             this.btnActualizar.Text = "ACTUALIZAR";
             this.btnActualizar.UseVisualStyleBackColor = false;
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
             // btnEliminar
             // 
@@ -232,6 +237,7 @@
             this.btnEliminar.TabIndex = 18;
             this.btnEliminar.Text = "ELIMINAR";
             this.btnEliminar.UseVisualStyleBackColor = false;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // dgvProveClien
             // 
@@ -240,6 +246,7 @@
             this.dgvProveClien.Name = "dgvProveClien";
             this.dgvProveClien.Size = new System.Drawing.Size(503, 279);
             this.dgvProveClien.TabIndex = 19;
+            this.dgvProveClien.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvProveClien_RowHeaderMouseClick);
             // 
             // txtBuscar
             // 
@@ -248,6 +255,7 @@
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(439, 25);
             this.txtBuscar.TabIndex = 21;
+            this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
             // 
             // lblBuscar
             // 
@@ -288,6 +296,7 @@
             this.Name = "frmProvClie";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmProvClie";
+            this.Load += new System.EventHandler(this.frmProvClie_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxClose)).EndInit();

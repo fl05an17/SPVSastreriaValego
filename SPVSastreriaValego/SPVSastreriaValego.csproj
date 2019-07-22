@@ -50,10 +50,12 @@
     <Compile Include="BLL\categoriasBLL.cs" />
     <Compile Include="BLL\loginBLL.cs" />
     <Compile Include="BLL\productosBLL.cs" />
+    <Compile Include="BLL\provclieBLL.cs" />
     <Compile Include="BLL\usuariosBLL.cs" />
     <Compile Include="DAL\categoriasDAL.cs" />
     <Compile Include="DAL\loginDAL.cs" />
     <Compile Include="DAL\productosDAL.cs" />
+    <Compile Include="DAL\provclieDAL.cs" />
     <Compile Include="DAL\usuariosDAL.cs" />
     <Compile Include="UI\frmCategorias.cs">
       <SubType>Form</SubType>

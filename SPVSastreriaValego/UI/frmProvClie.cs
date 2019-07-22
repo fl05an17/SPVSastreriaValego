@@ -1,4 +1,6 @@
-﻿using System;
+﻿using SPVSastreriaValego.BLL;
+using SPVSastreriaValego.DAL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,7 +21,124 @@ namespace SPVSastreriaValego.UI
 
         private void pictureBoxClose_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Hide();
+        }
+
+        provclieBLL pc = new provclieBLL();
+        provclieDAL pcdal = new provclieDAL();
+        usuariosDAL udal = new usuariosDAL();
+
+        private void frmProvClie_Load(object sender, EventArgs e)
+        {
+            DataTable dt = pcdal.Select();
+            dgvProveClien.DataSource = dt;
+        }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            pc.Tipo = cmbTipo.Text;
+            pc.Nombre = txtNombre.Text;
+            pc.Correo = txtCorreo.Text;
+            pc.Telefono = txtTelefono.Text;
+            pc.Direccion = txtDireccion.Text;
+            pc.added_date = DateTime.Now;
+            String loggedUsr = frmLogin.uConect;
+            usuariosBLL usr = udal.GetIDFromUsername(loggedUsr);
+            pc.added_by = usr.id;
+
+            bool success = pcdal.Insert(pc);
+
+            if (success == true)
+            {
+                MessageBox.Show("Cliente o Proveedor Agregado CORRECTAMENTE");
+                Clear();
+                DataTable dt = pcdal.Select();
+                dgvProveClien.DataSource = dt;
+            }
+            else
+            {
+                MessageBox.Show("FALLO al Agregar Cliente o Proveedor");
+            }
+        }
+
+        public void Clear()
+        {
+            txtId.Text = "";
+            txtNombre.Text = "";
+            txtCorreo.Text = "";
+            txtTelefono.Text = "";
+            txtDireccion.Text = "";            
+        }
+
+        private void dgvProveClien_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            int rowIndex = e.RowIndex;
+            txtId.Text = dgvProveClien.Rows[rowIndex].Cells[0].Value.ToString();
+            cmbTipo.Text = dgvProveClien.Rows[rowIndex].Cells[1].Value.ToString();
+            txtNombre.Text = dgvProveClien.Rows[rowIndex].Cells[2].Value.ToString();
+            txtCorreo.Text = dgvProveClien.Rows[rowIndex].Cells[3].Value.ToString();
+            txtTelefono.Text = dgvProveClien.Rows[rowIndex].Cells[4].Value.ToString();
+            txtDireccion.Text = dgvProveClien.Rows[rowIndex].Cells[5].Value.ToString();
+        }
+
+        private void btnActualizar_Click(object sender, EventArgs e)
+        {
+            pc.id = int.Parse(txtId.Text);
+            pc.Tipo = cmbTipo.Text;
+            pc.Nombre = txtNombre.Text;
+            pc.Correo = txtCorreo.Text;
+            pc.Telefono = txtTelefono.Text;
+            pc.Direccion = txtDireccion.Text;
+            pc.added_date = DateTime.Now;
+            String loggedUsr = frmLogin.uConect;
+            usuariosBLL usr = udal.GetIDFromUsername(loggedUsr);
+            pc.added_by = usr.id;
+
+            bool success = pcdal.Update(pc);
+            if (success == true)
+            {
+                MessageBox.Show("Cliente o Proveedor Actualizado CORRECTAMENTE");
+                Clear();
+                DataTable dt = pcdal.Select();
+                dgvProveClien.DataSource = dt;
+            }
+            else
+            {
+                MessageBox.Show("FALLO al Actualizar Cliente o Proveedor");
+            }
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            pc.id = int.Parse(txtId.Text);
+            bool success = pcdal.Delete(pc);
+            if (success == true)
+            {
+                MessageBox.Show("Cliente o Proveedor Eliminado CORRECTAMENTE");
+                Clear();
+                DataTable dt = pcdal.Select();
+                dgvProveClien.DataSource = dt;
+            }
+            else
+            {
+                MessageBox.Show("FALLO al Eliminar Cliente o Proveedor");
+            }
+        }
+
+        private void txtBuscar_TextChanged(object sender, EventArgs e)
+        {
+            string keywords = txtBuscar.Text;
+
+            if (keywords != null)
+            {
+                DataTable dt = pcdal.Search(keywords);
+                dgvProveClien.DataSource = dt;
+            }
+            else
+            {
+                DataTable dt = pcdal.Select();
+                dgvProveClien.DataSource = dt;
+            }
         }
     }
 }
