@@ -60,12 +60,14 @@
             this.comprasToolStripMenuItem.Name = "comprasToolStripMenuItem";
             this.comprasToolStripMenuItem.Size = new System.Drawing.Size(67, 20);
             this.comprasToolStripMenuItem.Text = "Compras";
+            this.comprasToolStripMenuItem.Click += new System.EventHandler(this.comprasToolStripMenuItem_Click);
             // 
             // formulariosDeVentaToolStripMenuItem
             // 
             this.formulariosDeVentaToolStripMenuItem.Name = "formulariosDeVentaToolStripMenuItem";
             this.formulariosDeVentaToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
             this.formulariosDeVentaToolStripMenuItem.Text = "Ventas";
+            this.formulariosDeVentaToolStripMenuItem.Click += new System.EventHandler(this.formulariosDeVentaToolStripMenuItem_Click);
             // 
             // inventarioToolStripMenuItem
             // 

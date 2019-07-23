@@ -29,5 +29,17 @@ namespace SPVSastreriaValego
         {
             lblLoggedInUser.Text = frmLogin.uConect;
         }
+
+        private void comprasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmComprasVentas comVen = new frmComprasVentas();
+            comVen.Show();
+        }
+
+        private void formulariosDeVentaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmComprasVentas comVen = new frmComprasVentas();
+            comVen.Show();
+        }
     }
 }
