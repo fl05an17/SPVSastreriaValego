@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,5 +17,6 @@ namespace SPVSastreriaValego.BLL
         public decimal iva { get; set; }
         public decimal Descuento { get; set; }
         public int added_by { get; set; }
+        public DataTable transactionDT { get; set; }
     }
 }

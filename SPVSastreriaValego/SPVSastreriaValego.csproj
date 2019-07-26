@@ -36,6 +36,7 @@
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Transactions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -58,6 +59,8 @@
     <Compile Include="DAL\loginDAL.cs" />
     <Compile Include="DAL\productosDAL.cs" />
     <Compile Include="DAL\provclieDAL.cs" />
+    <Compile Include="DAL\transaccioneDAL.cs" />
+    <Compile Include="DAL\transaccionesdetaDAL.cs" />
     <Compile Include="DAL\usuariosDAL.cs" />
     <Compile Include="UI\frmCategorias.cs">
       <SubType>Form</SubType>
@@ -103,6 +106,18 @@
     <Compile Include="UI\frmProvClie.Designer.cs">
       <DependentUpon>frmProvClie.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\frmProvClieU.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\frmProvClieU.Designer.cs">
+      <DependentUpon>frmProvClieU.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\frmTransacciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\frmTransacciones.Designer.cs">
+      <DependentUpon>frmTransacciones.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\frmUsuarios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -139,6 +154,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\frmProvClie.resx">
       <DependentUpon>frmProvClie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\frmProvClieU.resx">
+      <DependentUpon>frmProvClieU.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\frmTransacciones.resx">
+      <DependentUpon>frmTransacciones.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\frmUsuarios.resx">
       <DependentUpon>frmUsuarios.cs</DependentUpon>

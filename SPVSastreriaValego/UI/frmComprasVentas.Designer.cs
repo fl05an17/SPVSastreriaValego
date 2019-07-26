@@ -32,6 +32,8 @@
             this.pictureBoxClose = new System.Windows.Forms.PictureBox();
             this.lblTop = new System.Windows.Forms.Label();
             this.pnlProvClie = new System.Windows.Forms.Panel();
+            this.btnNuevoProvClie = new System.Windows.Forms.Button();
+            this.lblAggNueProvClie = new System.Windows.Forms.Label();
             this.dtpFechaDePagoPC = new System.Windows.Forms.DateTimePicker();
             this.txtDireccionPC = new System.Windows.Forms.TextBox();
             this.txtTelefonoPC = new System.Windows.Forms.TextBox();
@@ -62,20 +64,18 @@
             this.dgvProdAgre = new System.Windows.Forms.DataGridView();
             this.lblProdAgre = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnGuardar = new System.Windows.Forms.Button();
+            this.txtDevolver = new System.Windows.Forms.TextBox();
+            this.txtMedioPago = new System.Windows.Forms.TextBox();
+            this.txtGranTotal = new System.Windows.Forms.TextBox();
+            this.txtDescuento = new System.Windows.Forms.TextBox();
+            this.txtSubTotal = new System.Windows.Forms.TextBox();
             this.lblDevolver = new System.Windows.Forms.Label();
             this.lblMedPago = new System.Windows.Forms.Label();
             this.lblGranTotal = new System.Windows.Forms.Label();
-            this.lblIva = new System.Windows.Forms.Label();
             this.lblDescue = new System.Windows.Forms.Label();
             this.lblSubTotal = new System.Windows.Forms.Label();
             this.lblDetCalc = new System.Windows.Forms.Label();
-            this.txtSubTotal = new System.Windows.Forms.TextBox();
-            this.txtDescuento = new System.Windows.Forms.TextBox();
-            this.txtIva = new System.Windows.Forms.TextBox();
-            this.txtGranTotal = new System.Windows.Forms.TextBox();
-            this.txtMedioPago = new System.Windows.Forms.TextBox();
-            this.txtDevolver = new System.Windows.Forms.TextBox();
-            this.btnGuardar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxClose)).BeginInit();
             this.pnlProvClie.SuspendLayout();
@@ -111,7 +111,7 @@
             // 
             this.lblTop.AutoSize = true;
             this.lblTop.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTop.Location = new System.Drawing.Point(503, 7);
+            this.lblTop.Location = new System.Drawing.Point(546, 7);
             this.lblTop.Name = "lblTop";
             this.lblTop.Size = new System.Drawing.Size(161, 21);
             this.lblTop.TabIndex = 0;
@@ -119,6 +119,8 @@
             // 
             // pnlProvClie
             // 
+            this.pnlProvClie.Controls.Add(this.btnNuevoProvClie);
+            this.pnlProvClie.Controls.Add(this.lblAggNueProvClie);
             this.pnlProvClie.Controls.Add(this.dtpFechaDePagoPC);
             this.pnlProvClie.Controls.Add(this.txtDireccionPC);
             this.pnlProvClie.Controls.Add(this.txtTelefonoPC);
@@ -134,8 +136,31 @@
             this.pnlProvClie.Controls.Add(this.lblProvClieTitle);
             this.pnlProvClie.Location = new System.Drawing.Point(13, 52);
             this.pnlProvClie.Name = "pnlProvClie";
-            this.pnlProvClie.Size = new System.Drawing.Size(1192, 100);
+            this.pnlProvClie.Size = new System.Drawing.Size(1192, 161);
             this.pnlProvClie.TabIndex = 3;
+            // 
+            // btnNuevoProvClie
+            // 
+            this.btnNuevoProvClie.BackColor = System.Drawing.Color.Gold;
+            this.btnNuevoProvClie.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNuevoProvClie.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNuevoProvClie.Location = new System.Drawing.Point(964, 104);
+            this.btnNuevoProvClie.Name = "btnNuevoProvClie";
+            this.btnNuevoProvClie.Size = new System.Drawing.Size(142, 42);
+            this.btnNuevoProvClie.TabIndex = 14;
+            this.btnNuevoProvClie.Text = "NUEVO";
+            this.btnNuevoProvClie.UseVisualStyleBackColor = false;
+            this.btnNuevoProvClie.Click += new System.EventHandler(this.btnNuevoProvClie_Click);
+            // 
+            // lblAggNueProvClie
+            // 
+            this.lblAggNueProvClie.AutoSize = true;
+            this.lblAggNueProvClie.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAggNueProvClie.Location = new System.Drawing.Point(907, 75);
+            this.lblAggNueProvClie.Name = "lblAggNueProvClie";
+            this.lblAggNueProvClie.Size = new System.Drawing.Size(248, 17);
+            this.lblAggNueProvClie.TabIndex = 13;
+            this.lblAggNueProvClie.Text = "Registrar NUEVO (Proveedor o Cliente)";
             // 
             // dtpFechaDePagoPC
             // 
@@ -148,16 +173,16 @@
             // txtDireccionPC
             // 
             this.txtDireccionPC.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDireccionPC.Location = new System.Drawing.Point(659, 29);
+            this.txtDireccionPC.Location = new System.Drawing.Point(661, 53);
             this.txtDireccionPC.Multiline = true;
             this.txtDireccionPC.Name = "txtDireccionPC";
-            this.txtDireccionPC.Size = new System.Drawing.Size(196, 59);
+            this.txtDireccionPC.Size = new System.Drawing.Size(196, 94);
             this.txtDireccionPC.TabIndex = 11;
             // 
             // txtTelefonoPC
             // 
             this.txtTelefonoPC.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTelefonoPC.Location = new System.Drawing.Point(361, 63);
+            this.txtTelefonoPC.Location = new System.Drawing.Point(363, 118);
             this.txtTelefonoPC.Name = "txtTelefonoPC";
             this.txtTelefonoPC.Size = new System.Drawing.Size(213, 25);
             this.txtTelefonoPC.TabIndex = 10;
@@ -165,7 +190,7 @@
             // txtCorreoPC
             // 
             this.txtCorreoPC.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCorreoPC.Location = new System.Drawing.Point(361, 29);
+            this.txtCorreoPC.Location = new System.Drawing.Point(363, 53);
             this.txtCorreoPC.Name = "txtCorreoPC";
             this.txtCorreoPC.Size = new System.Drawing.Size(213, 25);
             this.txtCorreoPC.TabIndex = 9;
@@ -173,7 +198,7 @@
             // txtNombrePC
             // 
             this.txtNombrePC.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombrePC.Location = new System.Drawing.Point(73, 64);
+            this.txtNombrePC.Location = new System.Drawing.Point(75, 119);
             this.txtNombrePC.Name = "txtNombrePC";
             this.txtNombrePC.Size = new System.Drawing.Size(215, 25);
             this.txtNombrePC.TabIndex = 8;
@@ -181,10 +206,11 @@
             // txtBuscarPC
             // 
             this.txtBuscarPC.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBuscarPC.Location = new System.Drawing.Point(73, 29);
+            this.txtBuscarPC.Location = new System.Drawing.Point(75, 53);
             this.txtBuscarPC.Name = "txtBuscarPC";
             this.txtBuscarPC.Size = new System.Drawing.Size(215, 25);
             this.txtBuscarPC.TabIndex = 7;
+            this.txtBuscarPC.TextChanged += new System.EventHandler(this.txtBuscarPC_TextChanged);
             // 
             // lblFechaDePago
             // 
@@ -200,7 +226,7 @@
             // 
             this.lblDireccion.AutoSize = true;
             this.lblDireccion.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDireccion.Location = new System.Drawing.Point(587, 32);
+            this.lblDireccion.Location = new System.Drawing.Point(589, 56);
             this.lblDireccion.Name = "lblDireccion";
             this.lblDireccion.Size = new System.Drawing.Size(62, 17);
             this.lblDireccion.TabIndex = 5;
@@ -210,7 +236,7 @@
             // 
             this.lblTelefono.AutoSize = true;
             this.lblTelefono.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTelefono.Location = new System.Drawing.Point(297, 67);
+            this.lblTelefono.Location = new System.Drawing.Point(299, 122);
             this.lblTelefono.Name = "lblTelefono";
             this.lblTelefono.Size = new System.Drawing.Size(58, 17);
             this.lblTelefono.TabIndex = 4;
@@ -220,7 +246,7 @@
             // 
             this.lblEmail.AutoSize = true;
             this.lblEmail.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmail.Location = new System.Drawing.Point(297, 32);
+            this.lblEmail.Location = new System.Drawing.Point(299, 56);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(49, 17);
             this.lblEmail.TabIndex = 3;
@@ -230,7 +256,7 @@
             // 
             this.lblNombre.AutoSize = true;
             this.lblNombre.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombre.Location = new System.Drawing.Point(7, 66);
+            this.lblNombre.Location = new System.Drawing.Point(9, 121);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(57, 17);
             this.lblNombre.TabIndex = 2;
@@ -240,7 +266,7 @@
             // 
             this.lblBuscar.AutoSize = true;
             this.lblBuscar.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBuscar.Location = new System.Drawing.Point(7, 31);
+            this.lblBuscar.Location = new System.Drawing.Point(9, 55);
             this.lblBuscar.Name = "lblBuscar";
             this.lblBuscar.Size = new System.Drawing.Size(46, 17);
             this.lblBuscar.TabIndex = 1;
@@ -250,7 +276,7 @@
             // 
             this.lblProvClieTitle.AutoSize = true;
             this.lblProvClieTitle.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblProvClieTitle.Location = new System.Drawing.Point(4, 4);
+            this.lblProvClieTitle.Location = new System.Drawing.Point(4, 9);
             this.lblProvClieTitle.Name = "lblProvClieTitle";
             this.lblProvClieTitle.Size = new System.Drawing.Size(221, 17);
             this.lblProvClieTitle.TabIndex = 0;
@@ -270,7 +296,7 @@
             this.pnlDetProd.Controls.Add(this.txtBsucarProd);
             this.pnlDetProd.Controls.Add(this.lblBuscarProd);
             this.pnlDetProd.Controls.Add(this.lblDetProd);
-            this.pnlDetProd.Location = new System.Drawing.Point(13, 168);
+            this.pnlDetProd.Location = new System.Drawing.Point(13, 219);
             this.pnlDetProd.Name = "pnlDetProd";
             this.pnlDetProd.Size = new System.Drawing.Size(1192, 76);
             this.pnlDetProd.TabIndex = 4;
@@ -286,6 +312,7 @@
             this.btnAgregar.TabIndex = 24;
             this.btnAgregar.Text = "AGREGAR";
             this.btnAgregar.UseVisualStyleBackColor = false;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // txtCantidadProd
             // 
@@ -366,6 +393,7 @@
             this.txtBsucarProd.Name = "txtBsucarProd";
             this.txtBsucarProd.Size = new System.Drawing.Size(146, 25);
             this.txtBsucarProd.TabIndex = 15;
+            this.txtBsucarProd.TextChanged += new System.EventHandler(this.txtBsucarProd_TextChanged);
             // 
             // lblBuscarProd
             // 
@@ -391,7 +419,7 @@
             // 
             this.pnlDgvProdAgr.Controls.Add(this.dgvProdAgre);
             this.pnlDgvProdAgr.Controls.Add(this.lblProdAgre);
-            this.pnlDgvProdAgr.Location = new System.Drawing.Point(13, 260);
+            this.pnlDgvProdAgr.Location = new System.Drawing.Point(13, 311);
             this.pnlDgvProdAgr.Name = "pnlDgvProdAgr";
             this.pnlDgvProdAgr.Size = new System.Drawing.Size(604, 335);
             this.pnlDgvProdAgr.TabIndex = 5;
@@ -399,10 +427,10 @@
             // dgvProdAgre
             // 
             this.dgvProdAgre.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvProdAgre.Location = new System.Drawing.Point(10, 30);
+            this.dgvProdAgre.Location = new System.Drawing.Point(10, 33);
             this.dgvProdAgre.Name = "dgvProdAgre";
             this.dgvProdAgre.Size = new System.Drawing.Size(582, 292);
-            this.dgvProdAgre.TabIndex = 15;
+            this.dgvProdAgre.TabIndex = 15;            
             // 
             // lblProdAgre
             // 
@@ -420,26 +448,84 @@
             this.panel2.Controls.Add(this.txtDevolver);
             this.panel2.Controls.Add(this.txtMedioPago);
             this.panel2.Controls.Add(this.txtGranTotal);
-            this.panel2.Controls.Add(this.txtIva);
             this.panel2.Controls.Add(this.txtDescuento);
             this.panel2.Controls.Add(this.txtSubTotal);
             this.panel2.Controls.Add(this.lblDevolver);
             this.panel2.Controls.Add(this.lblMedPago);
             this.panel2.Controls.Add(this.lblGranTotal);
-            this.panel2.Controls.Add(this.lblIva);
             this.panel2.Controls.Add(this.lblDescue);
             this.panel2.Controls.Add(this.lblSubTotal);
             this.panel2.Controls.Add(this.lblDetCalc);
-            this.panel2.Location = new System.Drawing.Point(632, 260);
+            this.panel2.Location = new System.Drawing.Point(632, 311);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(573, 335);
             this.panel2.TabIndex = 6;
+            // 
+            // btnGuardar
+            // 
+            this.btnGuardar.BackColor = System.Drawing.Color.Turquoise;
+            this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGuardar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardar.Location = new System.Drawing.Point(203, 264);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(217, 45);
+            this.btnGuardar.TabIndex = 35;
+            this.btnGuardar.Text = "GUARDAR";
+            this.btnGuardar.UseVisualStyleBackColor = false;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            // 
+            // txtDevolver
+            // 
+            this.txtDevolver.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDevolver.ForeColor = System.Drawing.Color.DarkRed;
+            this.txtDevolver.Location = new System.Drawing.Point(116, 194);
+            this.txtDevolver.Name = "txtDevolver";
+            this.txtDevolver.ReadOnly = true;
+            this.txtDevolver.Size = new System.Drawing.Size(426, 33);
+            this.txtDevolver.TabIndex = 34;
+            // 
+            // txtMedioPago
+            // 
+            this.txtMedioPago.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMedioPago.Location = new System.Drawing.Point(116, 156);
+            this.txtMedioPago.Name = "txtMedioPago";
+            this.txtMedioPago.Size = new System.Drawing.Size(426, 25);
+            this.txtMedioPago.TabIndex = 33;
+            this.txtMedioPago.TextChanged += new System.EventHandler(this.txtMedioPago_TextChanged);
+            // 
+            // txtGranTotal
+            // 
+            this.txtGranTotal.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtGranTotal.Location = new System.Drawing.Point(116, 115);
+            this.txtGranTotal.Name = "txtGranTotal";
+            this.txtGranTotal.ReadOnly = true;
+            this.txtGranTotal.Size = new System.Drawing.Size(426, 25);
+            this.txtGranTotal.TabIndex = 32;
+            // 
+            // txtDescuento
+            // 
+            this.txtDescuento.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDescuento.Location = new System.Drawing.Point(116, 75);
+            this.txtDescuento.Name = "txtDescuento";
+            this.txtDescuento.Size = new System.Drawing.Size(426, 25);
+            this.txtDescuento.TabIndex = 30;
+            this.txtDescuento.TextChanged += new System.EventHandler(this.txtDescuento_TextChanged);
+            // 
+            // txtSubTotal
+            // 
+            this.txtSubTotal.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSubTotal.Location = new System.Drawing.Point(116, 33);
+            this.txtSubTotal.Name = "txtSubTotal";
+            this.txtSubTotal.ReadOnly = true;
+            this.txtSubTotal.Size = new System.Drawing.Size(426, 25);
+            this.txtSubTotal.TabIndex = 29;
+            this.txtSubTotal.Text = "0";
             // 
             // lblDevolver
             // 
             this.lblDevolver.AutoSize = true;
             this.lblDevolver.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDevolver.Location = new System.Drawing.Point(6, 242);
+            this.lblDevolver.Location = new System.Drawing.Point(6, 200);
             this.lblDevolver.Name = "lblDevolver";
             this.lblDevolver.Size = new System.Drawing.Size(70, 17);
             this.lblDevolver.TabIndex = 28;
@@ -449,31 +535,21 @@
             // 
             this.lblMedPago.AutoSize = true;
             this.lblMedPago.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMedPago.Location = new System.Drawing.Point(6, 201);
+            this.lblMedPago.Location = new System.Drawing.Point(6, 159);
             this.lblMedPago.Name = "lblMedPago";
-            this.lblMedPago.Size = new System.Drawing.Size(99, 17);
+            this.lblMedPago.Size = new System.Drawing.Size(81, 17);
             this.lblMedPago.TabIndex = 27;
-            this.lblMedPago.Text = "Medio de Pago";
+            this.lblMedPago.Text = "Paga con ($)";
             // 
             // lblGranTotal
             // 
             this.lblGranTotal.AutoSize = true;
             this.lblGranTotal.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGranTotal.Location = new System.Drawing.Point(6, 161);
+            this.lblGranTotal.Location = new System.Drawing.Point(6, 119);
             this.lblGranTotal.Name = "lblGranTotal";
             this.lblGranTotal.Size = new System.Drawing.Size(68, 17);
             this.lblGranTotal.TabIndex = 26;
             this.lblGranTotal.Text = "Gran Total";
-            // 
-            // lblIva
-            // 
-            this.lblIva.AutoSize = true;
-            this.lblIva.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblIva.Location = new System.Drawing.Point(6, 122);
-            this.lblIva.Name = "lblIva";
-            this.lblIva.Size = new System.Drawing.Size(49, 17);
-            this.lblIva.TabIndex = 25;
-            this.lblIva.Text = "IVA (%)";
             // 
             // lblDescue
             // 
@@ -505,76 +581,12 @@
             this.lblDetCalc.TabIndex = 15;
             this.lblDetCalc.Text = "Detalles Calculados";
             // 
-            // txtSubTotal
-            // 
-            this.txtSubTotal.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSubTotal.Location = new System.Drawing.Point(116, 33);
-            this.txtSubTotal.Name = "txtSubTotal";
-            this.txtSubTotal.ReadOnly = true;
-            this.txtSubTotal.Size = new System.Drawing.Size(426, 25);
-            this.txtSubTotal.TabIndex = 29;
-            // 
-            // txtDescuento
-            // 
-            this.txtDescuento.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDescuento.Location = new System.Drawing.Point(116, 75);
-            this.txtDescuento.Name = "txtDescuento";
-            this.txtDescuento.Size = new System.Drawing.Size(426, 25);
-            this.txtDescuento.TabIndex = 30;
-            // 
-            // txtIva
-            // 
-            this.txtIva.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIva.Location = new System.Drawing.Point(116, 117);
-            this.txtIva.Name = "txtIva";
-            this.txtIva.Size = new System.Drawing.Size(426, 25);
-            this.txtIva.TabIndex = 31;
-            // 
-            // txtGranTotal
-            // 
-            this.txtGranTotal.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtGranTotal.Location = new System.Drawing.Point(116, 157);
-            this.txtGranTotal.Name = "txtGranTotal";
-            this.txtGranTotal.ReadOnly = true;
-            this.txtGranTotal.Size = new System.Drawing.Size(426, 25);
-            this.txtGranTotal.TabIndex = 32;
-            // 
-            // txtMedioPago
-            // 
-            this.txtMedioPago.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMedioPago.Location = new System.Drawing.Point(116, 198);
-            this.txtMedioPago.Name = "txtMedioPago";
-            this.txtMedioPago.Size = new System.Drawing.Size(426, 25);
-            this.txtMedioPago.TabIndex = 33;
-            // 
-            // txtDevolver
-            // 
-            this.txtDevolver.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDevolver.ForeColor = System.Drawing.Color.DarkRed;
-            this.txtDevolver.Location = new System.Drawing.Point(116, 236);
-            this.txtDevolver.Name = "txtDevolver";
-            this.txtDevolver.ReadOnly = true;
-            this.txtDevolver.Size = new System.Drawing.Size(426, 33);
-            this.txtDevolver.TabIndex = 34;
-            // 
-            // btnGuardar
-            // 
-            this.btnGuardar.BackColor = System.Drawing.Color.Turquoise;
-            this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGuardar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuardar.Location = new System.Drawing.Point(218, 279);
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(217, 45);
-            this.btnGuardar.TabIndex = 35;
-            this.btnGuardar.Text = "GUARDAR";
-            this.btnGuardar.UseVisualStyleBackColor = false;
-            // 
             // frmComprasVentas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.ClientSize = new System.Drawing.Size(1221, 607);
+            this.ClientSize = new System.Drawing.Size(1221, 658);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.pnlDgvProdAgr);
             this.Controls.Add(this.pnlDetProd);
@@ -584,6 +596,7 @@
             this.Name = "frmComprasVentas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Compras y Ventas";
+            this.Load += new System.EventHandler(this.frmComprasVentas_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxClose)).EndInit();
@@ -639,7 +652,6 @@
         private System.Windows.Forms.Label lblDevolver;
         private System.Windows.Forms.Label lblMedPago;
         private System.Windows.Forms.Label lblGranTotal;
-        private System.Windows.Forms.Label lblIva;
         private System.Windows.Forms.Label lblDescue;
         private System.Windows.Forms.Label lblSubTotal;
         private System.Windows.Forms.Label lblDetCalc;
@@ -647,8 +659,9 @@
         private System.Windows.Forms.TextBox txtDevolver;
         private System.Windows.Forms.TextBox txtMedioPago;
         private System.Windows.Forms.TextBox txtGranTotal;
-        private System.Windows.Forms.TextBox txtIva;
         private System.Windows.Forms.TextBox txtDescuento;
         private System.Windows.Forms.TextBox txtSubTotal;
+        private System.Windows.Forms.Button btnNuevoProvClie;
+        private System.Windows.Forms.Label lblAggNueProvClie;
     }
 }

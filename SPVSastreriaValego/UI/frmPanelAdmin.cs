@@ -55,5 +55,11 @@ namespace SPVSastreriaValego
             frmProvClie ProvCli = new frmProvClie();
             ProvCli.Show();
         }
+
+        private void transaccionesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmTransacciones tran = new frmTransacciones();
+            tran.Show();
+        }
     }
 }

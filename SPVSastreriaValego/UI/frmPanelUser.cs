@@ -18,6 +18,9 @@ namespace SPVSastreriaValego
             InitializeComponent();
         }
 
+        //Set a public static method to specify whether the form is purchase or sales 
+        public static string transaccionesType;
+
         private void frmPanelUser_FormClosed(object sender, FormClosedEventArgs e)
         {
             frmLogin login = new frmLogin();
@@ -32,14 +35,18 @@ namespace SPVSastreriaValego
 
         private void comprasToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmComprasVentas comVen = new frmComprasVentas();
-            comVen.Show();
+            //set value on transactiontype static method
+            transaccionesType = "COMPRAS";
+            frmComprasVentas compras = new frmComprasVentas();
+            compras.Show();            
         }
 
         private void formulariosDeVentaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmComprasVentas comVen = new frmComprasVentas();
-            comVen.Show();
+            //set value on transactiontype static method
+            transaccionesType = "VENTAS";
+            frmComprasVentas ventas = new frmComprasVentas();
+            ventas.Show();            
         }
     }
 }

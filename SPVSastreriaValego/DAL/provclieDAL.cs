@@ -199,7 +199,80 @@ namespace SPVSastreriaValego.DAL
             return dt;
         }
         #endregion
+        #region Method to Search Dealer or Customer for Transaction Module
+        public provclieBLL SearchProvClieForTransaction(string keyword)
+        {
+            //Create an object for ProvClie Class
+            provclieBLL pc = new provclieBLL();
 
+            SqlConnection conn = new SqlConnection(myconnstrng);
+
+            DataTable dt = new DataTable();
+
+            try
+            {
+                string sql = "SELECT Nombre, Correo, Telefono, Direccion FROM tbl_Prov_Clie WHERE id LIKE '%" + keyword + "%' OR Nombre LIKE '%" + keyword + "%'";
+
+                SqlDataAdapter adapter = new SqlDataAdapter(sql, conn);
+
+                conn.Open();
+
+                adapter.Fill(dt);
+
+                if (dt.Rows.Count > 0)
+                {
+                    pc.Nombre = dt.Rows[0]["Nombre"].ToString();
+                    pc.Correo = dt.Rows[0]["Correo"].ToString();
+                    pc.Telefono = dt.Rows[0]["Telefono"].ToString();
+                    pc.Direccion = dt.Rows[0]["Direccion"].ToString();
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+            return pc;
+        }
+        #endregion
+        #region Method to get ID of the Dealer or customer based on name
+        public provclieBLL GetProvclieIDFromName(string Nombre)
+        {
+            //First Create an Object of DeaCust BLL and return it
+            provclieBLL pc = new provclieBLL();
+
+            SqlConnection conn = new SqlConnection(myconnstrng);
+
+            DataTable dt = new DataTable();
+
+            try
+            {
+                //SQL Query to get id Based on Name
+                string sql = "SELECT id FROM tbl_Prov_Clie WHERE Nombre ='" + Nombre + "'";
+                SqlDataAdapter adapter = new SqlDataAdapter(sql, conn);
+                conn.Open();
+
+                adapter.Fill(dt);
+                if (dt.Rows.Count > 0)
+                {
+                    pc.id = int.Parse(dt.Rows[0]["id"].ToString());
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return pc;
+        }
+        #endregion
     }
 
 }

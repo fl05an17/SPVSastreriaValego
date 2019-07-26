@@ -34,13 +34,13 @@
             this.usuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.categoriaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.productosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.proveedoresYClientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.inventarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.transaccionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lblUser = new System.Windows.Forms.Label();
             this.lblLoggedInUser = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.proveedoresYClientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pnlFooter.SuspendLayout();
             this.menuStripTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -102,6 +102,13 @@
             this.productosToolStripMenuItem.Text = "Productos";
             this.productosToolStripMenuItem.Click += new System.EventHandler(this.productosToolStripMenuItem_Click);
             // 
+            // proveedoresYClientesToolStripMenuItem
+            // 
+            this.proveedoresYClientesToolStripMenuItem.Name = "proveedoresYClientesToolStripMenuItem";
+            this.proveedoresYClientesToolStripMenuItem.Size = new System.Drawing.Size(138, 20);
+            this.proveedoresYClientesToolStripMenuItem.Text = "Proveedores y Clientes";
+            this.proveedoresYClientesToolStripMenuItem.Click += new System.EventHandler(this.proveedoresYClientesToolStripMenuItem_Click);
+            // 
             // inventarioToolStripMenuItem
             // 
             this.inventarioToolStripMenuItem.Name = "inventarioToolStripMenuItem";
@@ -113,6 +120,7 @@
             this.transaccionesToolStripMenuItem.Name = "transaccionesToolStripMenuItem";
             this.transaccionesToolStripMenuItem.Size = new System.Drawing.Size(93, 20);
             this.transaccionesToolStripMenuItem.Text = "Transacciones";
+            this.transaccionesToolStripMenuItem.Click += new System.EventHandler(this.transaccionesToolStripMenuItem_Click);
             // 
             // lblUser
             // 
@@ -153,13 +161,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
-            // 
-            // proveedoresYClientesToolStripMenuItem
-            // 
-            this.proveedoresYClientesToolStripMenuItem.Name = "proveedoresYClientesToolStripMenuItem";
-            this.proveedoresYClientesToolStripMenuItem.Size = new System.Drawing.Size(138, 20);
-            this.proveedoresYClientesToolStripMenuItem.Text = "Proveedores y Clientes";
-            this.proveedoresYClientesToolStripMenuItem.Click += new System.EventHandler(this.proveedoresYClientesToolStripMenuItem_Click);
             // 
             // frmPanelAdmin
             // 
